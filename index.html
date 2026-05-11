@@ -169,33 +169,53 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* УБРАЛИ background var(--gradient) */
 }
 
-        .hero::before {
-content: 'Вячеслав и Юлия\AДва сердца бьются в унисон\AДОРОГИЕ РОДНЫЕ И БЛИЗКИЕ!\AV этом году один день станет для нас особенно значимым, и мы хотим провести его в кругу самых близких нам людей. Мы счастливы пригласить Вас отпраздновать вместе наш особенный и тёплый день - день нашей СВАДЬБЫ.\AЭтот день станет началом нашей долгой, счастливой, семейной жизни.'
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-font-family: 'Great Vibes', 'Playfair Display', serif;
-font-size: clamp(2.5rem, 7vw, 5rem);
-color: rgba(255, 255, 255, 0.95);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-line-height: 1.8;
-text-shadow:
-0 2px 4px rgba(0,0,0,0.5),
-0 0 20px rgba(244, 228, 240, 0.2);
-z-index: 1;
-background: rgba(244, 228, 240, 0.1);
-white-space: pre;
-
+/* 1. ФОНОВЫЙ ТЕКСТ ИМЁН */
+.hero::before {
+  content: 'Вячеслав и Юлия\nДва сердца бьются в унисон';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: 'Great Vibes', 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.8;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(244, 228, 240, 0.2);
+  z-index: 1;
+  background: rgba(244, 228, 240, 0.1);
+  white-space: pre-line;
 }
+
+/* 2. ПРИГЛАШЕНИЕ ПОД НИМ */
+.hero::after {
+  content: 'ДОРОГИЕ РОДНЫЕ И БЛИЗКИЕ!\n\nВ этом году один день станет для нас особенно значимым, и мы хотим провести его в кругу самых близких нам людей. Мы счастливы пригласить Вас отпраздновать вместе наш особенный и тёплый день — день нашей СВАДЬБЫ.\n\nЭтот день станет началом нашей долгой, счастливой, семейной жизни.';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 700px;
+  padding: 0 2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  white-space: pre-line;
+  display: block;
+}
+
 
         @keyframes float {
             0% { transform: translateY(0px) rotate(0deg); }
