@@ -160,7 +160,7 @@
             transition: 0.3s;
         }    
 
-        /* Hero Section - Минималистичный */
+/* Hero Section - Минималистичный (в стиле dresscode) */
 .hero {
   height: 100vh;
   position: relative;
@@ -169,11 +169,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent-light)); /* градиент как в dresscode-section */
+  padding: 80px 0; /* отступы как в dresscode-section */
 }
 
 /* 1. ФОНОВЫЙ ТЕКСТ ИМЁН */
 .hero::before {
-    content: 'ДОРОГИЕ РОДНЫЕ И БЛИЗКИЕ!\A\AВ этом году один день станет для нас особенно значимым, и мы хотим провести его в кругу самых близких нам людей. Мы счастливы пригласить Вас отпраздновать вместе наш особенный и тёплый день - день нашей СВАДЬБЫ.\A\AЭтот день станет началом нашей долгой, счастливой, семейной жизни.';
+  content: 'ДОРОГИЕ РОДНЫЕ И БЛИЗКИЕ!\A\AВ этом году один день станет для нас особенно значимым, и мы хотим провести его в кругу самых близких нам людей. Мы счастливы пригласить Вас отпраздновать вместе наш особенный и тёплый день — день нашей СВАДЬБЫ.\A\AЭтот день станет началом нашей долгой, счастливой, семейной жизни.';
   position: absolute;
   top: 50%;
   left: 0;
@@ -181,19 +183,27 @@
   transform: translateY(30%);
   font-family: 'Poppins', sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.3rem);
-  color: rgba(68, 68, 68, 0.9);
-     background: linear-gradient(135deg, var(--primary), var(--accent-light));
-  padding: 1.5rem 2rem; /* увеличиваем внутренние отступы */
-  border-radius: 8px; /* скруглённые углы для мягкости */
-text-align: center;
+  color: #ffffff; /* белый текст для контраста с градиентом */
+  text-align: center;
   line-height: 1.6;
   max-width: 700px;
   margin: 0 auto;
-  padding: 0 2rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-  z-index: 1.5;  /* МЕЖДУ ::before (1) и .hero-content (2) */
+  padding: 2rem; /* внутренние отступы как в dresscode-item */
+  background: rgba(255, 255, 255, 0.15); /* полупрозрачная подложка */
+  border-radius: 25px; /* скругление углов как в dresscode-item */
+  box-shadow: var(--shadow); /* тень из переменных как в dresscode-item */
+  border: var(--border); /* рамка из переменных как в dresscode-item */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2; /* целое число вместо 1.5 */
   white-space: pre-line;
+  transition: transform 0.3s ease; /* плавная анимация как в dresscode-item */
 }
+
+/* Анимация при наведении на текст (опционально) */
+.hero::before:hover {
+  transform: translateY(-10px) translateX(-50%); /* подъём вверх при наведении */
+}
+
 
 
 
