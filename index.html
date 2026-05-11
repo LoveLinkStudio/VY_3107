@@ -1126,55 +1126,73 @@ header { z-index: 1001 !important; }
 
 
     <!-- RSVP - НЕ В КОНЦЕ -->
-    <section id="rsvp" class="section">
-    <h2 class="section-title" data-aos="fade-up">Подтверждение участия</h2>
-    <form class="rsvp-form" id="rsvpForm" data-aos="zoom-in">
-        <div class="form-row">
-            <div class="form-group">
-                <label>Ваше имя *</label>
-                <input type="text" id="guestName" required>
-            </div>
-            <div class="form-group">
-                <label>Количество гостей</label>
-                <select id="guestCount" required>
-                    <option value="">Выберите</option>
-                    <option value="1">1 гость</option>
-                    <option value="2">2 гостя</option>
-                    <option value="3">3 гостя</option>
-                    <option value="4+">4+ гостей</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label>Присутствуете? *</label>
-                <select id="attendance" required>
-                    <option value="">Выберите</option>
-                    <option value="yes">Да, приеду ❤️</option>
-                    <option value="no">К сожалению, нет</option>
-                </select>
-            </div>
-            <!-- Новые поля в отдельном form-row для двух колонок на десктопе -->
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label>Телефон для рассылки *</label>
-                <input type="tel" id="phone" required placeholder="+7 (XXX) XXX-XX-XX">
-            </div>
-            <div class="form-group">
-                <label>Особые предпочтения</label>
-                <textarea id="preferences" rows="4" placeholder="Аллергия (на орехи, глютен и т.д.), диета (вегетарианская, веганская), другие пожелания..."></textarea>
-            </div>
-        </div>
-        <div class="form-group">
-            <label>Пожелания молодоженам</label>
-            <textarea id="wishes" rows="4" placeholder="Поделитесь теплыми словами, вопросами или пожеланиями..."></textarea>
-        </div>
-        <button type="submit" class="submit-btn">
-            Отправить подтверждение
-        </button>
-    </form>
+   <!-- RSVP - НЕ В КОНЦЕ -->
+<section id="rsvp" class="section">
+  <h2 class="section-title" data-aos="fade-up">Подтверждение участия</h2>
+  <form class="rsvp-form" id="rsvpForm" data-aos="zoom-in">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Ваше имя *</label>
+        <input type="text" id="guestName" required>
+      </div>
+      <div class="form-group">
+        <label>Количество гостей</label>
+        <select id="guestCount" required>
+          <option value="">Выберите</option>
+          <option value="1">1 гость</option>
+          <option value="2">2 гостя</option>
+          <option value="3">3 гостя</option>
+          <option value="4+">4+ гостей</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Присутствуете? *</label>
+        <select id="attendance" required>
+          <option value="">Выберите</option>
+          <option value="yes">Да, приеду ❤️</option>
+          <option value="no">К сожалению, нет</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Телефон для рассылки *</label>
+        <input type="tel" id="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+      </div>
+      <div class="form-group">
+        <label>Особые предпочтения</label>
+        <textarea id="preferences" rows="4" placeholder="Аллергия (на орехи, глютен и т.д.), диета (вегетарианская, веганская), другие пожелания..."></textarea>
+      </div>
+    </div>
+
+    <!-- НОВЫЙ БЛОК: Выбор напитка -->
+    <div class="form-row">
+      <div class="form-group">
+        <label>Что будете пить?</label>
+        <select id="drinkChoice" required>
+          <option value="">Выберите напиток</option>
+          <option value="red-wine">Вино красное</option>
+          <option value="white-wine">Вино белое</option>
+          <option value="champagne">Шампанское</option>
+          <option value="vodka">Водка</option>
+          <option value="moonshine">Самогон</option>
+          <option value="non-alcoholic">Безалкогольные напитки</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Пожелания молодоженам</label>
+      <textarea id="wishes" rows="4" placeholder="Поделитесь теплыми словами, вопросами или пожеланиями..."></textarea>
+    </div>
+    <button type="submit" class="submit-btn">
+      Отправить подтверждение
+    </button>
+  </form>
 </section>
+
     
 
     <!-- Admin Panel -->
