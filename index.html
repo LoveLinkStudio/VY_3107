@@ -31,7 +31,7 @@
   appId: "1:838708765760:web:2844d915fc5fa7b91ceba5"
 };
   
-  firebase.initializeApp(rsvpFirebaseConfig);
+  firebase.initializeApp(FirebaseConfig);
   const rsvpDb = firebase.database();
 </script>
     <style>
@@ -1550,7 +1550,7 @@ function loadAdminEntries() {
         });
         const placemark = new ymaps.Placemark([56.661057, 65.377606], {
             hintContent: 'Ул. Калинина 16а',
-            balloonContent: '<strong>Свадьба Игоря & Марии</strong><br>с. Шорохово, Тюменская обл.<br>31.07.2026',
+            balloonContent: '<strong>Вячеслав и Юлия</strong><br>с. Шорохово, Тюменская обл.<br>31.07.2026',
         }, {
             preset: 'islands#icon',
             iconColor: '#ff69b4'
