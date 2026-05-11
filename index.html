@@ -181,7 +181,7 @@
   left: 0;
   right: 0;
   transform: translateY(30%);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   color: #222222; /* белый текст для контраста с градиентом */
   text-align: center;
@@ -1544,13 +1544,13 @@ function loadAdminEntries() {
         function initMap() {
     ymaps.ready(function() {
         map = new ymaps.Map('map', {
-            center: [57.258832, 65.108490],  // Новые координаты!
+            center: [56.661057, 65.377606],  // Новые координаты!
             zoom: 16,
             controls: ['zoomControl', 'fullscreenControl']
         });
-        const placemark = new ymaps.Placemark([57.258832, 65.108490], {
-            hintContent: 'Ул. Виктора Соколова, 7',
-            balloonContent: '<strong>Свадьба Игоря & Марии</strong><br>с. Кулига, Тюменская обл.<br>07.07.2027',
+        const placemark = new ymaps.Placemark([56.661057, 65.377606], {
+            hintContent: 'Ул. Калинина 16а',
+            balloonContent: '<strong>Свадьба Игоря & Марии</strong><br>с. Шорохово, Тюменская обл.<br>31.07.2026',
         }, {
             preset: 'islands#icon',
             iconColor: '#ff69b4'
