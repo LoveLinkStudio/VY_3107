@@ -161,7 +161,7 @@
         }    
 
         /* Hero Section - Минималистичный */
-        .hero {
+.hero {
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -208,13 +208,14 @@
   color: rgba(255, 255, 255, 0.85);
   text-align: center;
   line-height: 1.6;
-  max-width: 700px;
+  max-width: calc(100% - 4rem); /* адаптивная ширина: вся ширина минус отступы */
   padding: 0 2rem;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   z-index: 2;
   white-space: pre-line;
   display: block;
 }
+
 
 
         @keyframes float {
